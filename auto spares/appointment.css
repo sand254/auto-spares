@@ -1,0 +1,182 @@
+/* Appointment Form Styles */
+.appointment-form-section {
+    padding: 60px 0;
+    position: relative;
+    background-image: url('https://source.unsplash.com/random/1600x900/?auto-repair-shop');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; /* Full height of the viewport */
+    display: flex; /* Flex to center contents */
+    align-items: center; /* Vertical center */
+    justify-content: center; /* Horizontal center */
+}
+
+.appointment-form-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.appointment-form-container {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px; /* Reduced for better centering */
+}
+
+.modern-appointment-form {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    gap: 20px;
+    justify-content: center;
+}
+
+.form-group {
+    flex: 1;
+    min-width: 250px;
+    position: relative;
+    max-width: 300px;
+}
+
+.form-group.wide {
+    flex: 2;
+    max-width: 620px;
+}
+
+.modern-appointment-form input,
+.modern-appointment-form textarea,
+.modern-appointment-form select {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.modern-appointment-form input::placeholder,
+.modern-appointment-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+}
+
+.modern-appointment-form input:focus,
+.modern-appointment-form textarea:focus,
+.modern-appointment-form select:focus {
+    outline: none;
+    border-bottom-color: var(--primary-color);
+}
+
+.validation-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #4CAF50;
+    display: none;
+}
+
+.modern-appointment-form input:valid ~ .validation-icon,
+.modern-appointment-form textarea:valid ~ .validation-icon {
+    display: block;
+}
+
+.submit-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.modern-appointment-form button {
+    padding: 12px 40px;
+    font-size: 16px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    min-width: 200px;
+}
+
+.modern-appointment-form button:hover {
+    background-color: var(--primary-dark);
+}
+
+/* reCAPTCHA Placeholder */
+.recaptcha-placeholder {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    border-radius: 3px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.recaptcha-placeholder .checkbox {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #c1c1c1;
+    border-radius: 2px;
+    margin-right: 10px;
+}
+
+.recaptcha-placeholder span {
+    color: #000;
+    flex-grow: 1;
+}
+
+.recaptcha-logo {
+    width: 32px;
+    height: 32px;
+}
+
+/* Form Section Title */
+.form-section-title {
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 28px;
+    font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .form-row {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .form-group, .form-group.wide {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .appointment-form-container {
+        padding: 40px 20px;
+    }
+}
